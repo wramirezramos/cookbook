@@ -47,14 +47,11 @@ class RecipesControllerTest < ActionController::TestCase
 
     assert_redirected_to recipes_path
   end
-  private
-    def login(username, password)
-      credentials = ActionController::HttpAuthentication::Basic.encode_credentials 
-      username, password
+  private def login(username, password)
+      credentials = ActionController::HttpAuthentication::Basic.encode_credentials username, password
       request.env['HTTP_AUTHORIZATION'] = credentials
     end
     # END
     #
-    end
-end
+    
 end
