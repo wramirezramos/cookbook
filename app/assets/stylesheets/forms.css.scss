@@ -1,0 +1,14 @@
+$contentBackgroundColor: #fff;
+$width: 960px;
+.content{
+    background-color: $contentBackgroundColor;
+    margin: 0 auto;
+    
+    @media only screen and (min-width: $width){
+        width: $width;
+    }
+    
+    @media only screen and (max-width: $width -1){
+        width: 90%;
+    }
+}
